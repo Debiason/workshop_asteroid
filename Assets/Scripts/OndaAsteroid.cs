@@ -11,8 +11,19 @@ public class OndaAsteroid : MonoBehaviour
     {
         for (int i = 0; i < quantoAsteroide; i++)
         {
-            float x = Random.Range(-7.0f,7.0f);
-            float y = Random.Range(-4.0f,4.0f);
+            float x = Random.Range(-9.0f,9.0f);
+            float y = Random.Range(-6.0f,6.0f);
+
+            if ((x >= -1.0f) && (x <= 1.0f))
+            {
+                 x = Random.Range(-9.0f,9.0f);
+            }
+
+            if ((y >= -1.0f) && (y <= 1.0f))
+            {
+                 y = Random.Range(-6.0f,6.0f);
+            }
+
             Vector3 posicao = new Vector3(x,y,0.0f);
             Instantiate(prefabAsteroid,posicao,Quaternion.identity);
         }

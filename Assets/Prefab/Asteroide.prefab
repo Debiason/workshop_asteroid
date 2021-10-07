@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4580830729280781530}
   - component: {fileID: 4580830729280781531}
   - component: {fileID: 4580830729280781529}
+  - component: {fileID: 155795014112961464}
   m_Layer: 8
   m_Name: Asteroide
   m_TagString: Untagged
@@ -135,4 +136,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meuRigidboby: {fileID: 4580830729280781530}
+  prefabEfeito: {fileID: 5687811552921819324, guid: b031458ab19ca0945a1c3933466d1dc2, type: 3}
+  prefabFragmentos: {fileID: 4580830729280781530, guid: d6fb17bb8b67397419c981ed122a1491, type: 3}
+  quantidadeFragmento: 3
   velocidadeMaxima: 2
+--- !u!114 &155795014112961464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580830729280774950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a9510bb39407a46aecf644b9ab24f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meuRigidbody: {fileID: 4580830729280781530}

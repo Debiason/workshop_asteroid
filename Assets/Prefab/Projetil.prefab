@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2248723540111681484}
   - component: {fileID: 2248723540111681475}
   - component: {fileID: 2248723540111681474}
+  - component: {fileID: -2329294315742636204}
   m_Layer: 7
   m_Name: Projetil
   m_TagString: Untagged
@@ -121,3 +122,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2329294315742636204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248723540111681473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a9510bb39407a46aecf644b9ab24f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meuRigidbody: {fileID: 2248723540111681474}

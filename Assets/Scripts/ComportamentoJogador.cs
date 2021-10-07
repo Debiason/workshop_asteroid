@@ -12,11 +12,21 @@ public class ComportamentoJogador : MonoBehaviour
     public Rigidbody2D prefabProjetil;
     public float velocidadeProjetil= 10.0f;
 
+    public float duracaoProjetil = 1.0f;
+
+    public Sprite spriteInicio;
+    public Sprite spriteMovendo;
+
+    private SpriteRenderer spriteRender;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRender = GetComponent<SpriteRenderer>();
+        if (spriteRender.sprite==null)
+        {
+            spriteRender.sprite = spriteInicio;
+        }
     }
 
     void Update()
@@ -25,6 +35,7 @@ public class ComportamentoJogador : MonoBehaviour
         {
             Rigidbody2D projetil = Instantiate(prefabProjetil,meuRigidbody.position, Quaternion.identity);
             projetil.velocity = transform.up * velocidadeProjetil;
+            Destroy(projetil.gameObject,duracaoProjetil);
         }
     }
     // Update is called once per frame
@@ -32,6 +43,7 @@ public class ComportamentoJogador : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.UpArrow))
         {
+            ChangeTheDamnSprite ();
             Vector3 direcao = transform.up * aceleracao;
             meuRigidbody.AddForce(direcao, ForceMode2D.Force);
         }
@@ -49,6 +61,19 @@ public class ComportamentoJogador : MonoBehaviour
         {
             meuRigidbody.velocity = Vector2.ClampMagnitude(meuRigidbody.velocity,velocidadeMaxima);
         }
+    }
+
+    void ChangeTheDamnSprite ()
+    {
+        if (spriteRender.sprite == spriteInicio) 
+        {
+            spriteRender.sprite = spriteMovendo;
+        }
+        else
+        {
+            spriteRender.sprite = spriteInicio; 
+        }
+        
     }
 
 
